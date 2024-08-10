@@ -39,7 +39,7 @@ setDefaultLocale('sr');
 type EventFormProps = {
     event?: IEvent,
     eventId?: string,
-    userId: string,
+    userId?: string,
     type: "Kreiraj" | "Ažuriraj"
 }
 
