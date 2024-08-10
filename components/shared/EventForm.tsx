@@ -39,7 +39,7 @@ setDefaultLocale('sr');
 type EventFormProps = {
     event?: IEvent,
     eventId?: string,
-    userId?: string,
+    userId: string,
     type: "Kreiraj" | "Ažuriraj"
 }
 
@@ -92,13 +92,13 @@ const EventForm = ({ userId, event, eventId, type }: EventFormProps) => {
         if(type === "Ažuriraj") {
 
             if(!eventId) {
-                router.back();
+                throw new Error("Za ažuriranje neopgodan je eventId.");
             }
 
             try {
                 const updatedEvent = await updateEvent({
                     userId,
-                    event: { ...values, imageIrl:uploadedImageUrl, _id: eventId },
+                    event: { ...values, imageUrl:uploadedImageUrl, _id: eventId },
                     path: `/event/${eventId}`
                 });
 
@@ -264,7 +264,7 @@ const EventForm = ({ userId, event, eventId, type }: EventFormProps) => {
                             onChange={(date: Date | null) => field.onChange(date)}
                             showTimeSelect
                             timeInputLabel="Vreme:"
-                            timeCaption="време:"
+                            timeCaption="Vreme:"
                             dateFormat="dd.MM.yyyy HH:mm"
                             locale="sr"
                             wrapperClassName="datePicker"
