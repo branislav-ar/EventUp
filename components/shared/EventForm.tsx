@@ -17,9 +17,11 @@ import { useUploadThing } from "@/lib/uploadthing"
 import { createEvent, updateEvent } from "@/lib/actions/event.actions"
 
 import Image from "next/image";
-import sr from 'date-fns/locale/sr';
-import { registerLocale, setDefaultLocale } from 'react-datepicker';
-import DatePicker from "react-datepicker";
+//import sr from 'date-fns/locale/sr';
+//import { registerLocale, setDefaultLocale } from 'react-datepicker';
+//import Locale  from 'react-datepicker';
+
+import DatePicker, { setDefaultLocale } from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 
 import Dropdown from "./Dropdown"
@@ -29,7 +31,9 @@ import { useState } from "react"
 import { useRouter } from "next/navigation"
 import { IEvent } from "@/lib/database/models/event.model";
 
-registerLocale('sr', sr);
+//const srLocale = sr as unknown as Locale;
+
+//registerLocale('sr', srLocale);
 setDefaultLocale('sr');
 
 type EventFormProps = {
@@ -229,7 +233,7 @@ const EventForm = ({ userId, event, eventId, type }: EventFormProps) => {
                             onChange={(date: Date | null) => field.onChange(date)}
                             showTimeSelect
                             timeInputLabel="Vreme:"
-                            timeCaption="време:"
+                            timeCaption="Vreme:"
                             dateFormat="dd.MM.yyyy HH:mm"
                             locale="sr"
                             wrapperClassName="datePicker"
