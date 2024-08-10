@@ -13,7 +13,7 @@ export const headerLinks = [
     },
   ]
   
-  export const eventDefaultValues = {
+export const eventDefaultValues = {
     title: '',
     description: '',
     location: '',
@@ -24,4 +24,9 @@ export const headerLinks = [
     price: '',
     isFree: false,
     url: '',
-  }
+}
+
+export const Colors = {
+  blueDark: '#395E6F',
+  blueLight: '#42C1BA'
+}

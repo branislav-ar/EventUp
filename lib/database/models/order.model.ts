@@ -1,17 +1,17 @@
 import { Schema, model, models, Document } from 'mongoose'
 
 export interface IOrder extends Document {
-    createdAt: Date;
-    stripeId: string;
-    totalAmount: string;
+    createdAt: Date
+    stripeId: string
+    totalAmount: string
     event: {
-        _id: string;
-        title: string;
+        _id: string
+        title: string
     }
     buyer: {
-        _id: string;
-        firstName: string;
-        lastname: string;
+        _id: string
+        firstName: string
+        lastname: string
     }
 }
 

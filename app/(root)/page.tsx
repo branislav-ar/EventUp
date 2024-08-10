@@ -1,8 +1,19 @@
 import Image from "next/image";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import Collection from "@/components/shared/Collection";
+import { getAllEvents } from "@/lib/actions/event.actions";
+import Category from "@/lib/database/models/category.model";
 
-export default function Home() {
+export default async function Home() {
+
+  const events = await getAllEvents({
+    query: '',
+    category: '',
+    page: 1,
+    limit: 6
+  });
+
   return (
     <>
         <section className="bg-primary-50 bg-dotted-pattern bg-contain py-5 md:py-3">
@@ -11,7 +22,7 @@ export default function Home() {
             <div className="flex flex-col justify-center gap-7">
               <h1 className="h1-bold">Organizujte, povežite se i proslavite:<br />Vaši događaji,<br />naša platforma!</h1>
               <p className="p-regular-10 md:p-regular-20">Pridružite se našoj zajednici i otkrijte nove avanture: kreirajte i učestvujte u događajima u vašoj okolini uz samo nekoliko klikova.</p>
-              <Button size="lg" asChild className="button w-full sm:w-fit bg-[#395E6F]">
+              <Button size="lg" asChild className="button w-full sm:w-fit bg-[#395E6F] hover:bg-[#4b6977]">
                 <Link href="#events">
                   Istražite sada!
                 </Link>
@@ -43,6 +54,16 @@ export default function Home() {
             Search 
             CategoriesFilter
           </div>
+
+          <Collection 
+            data={events?.data}
+            emptyTitle="Trenutno nema događaja..."
+            emptyStateSubtext="Probajte ponovo kasnije!"
+            collectionType="All_Events"
+            limit={6}
+            page={1}
+            totalPages={2}
+          />
           
         </section>
     </>

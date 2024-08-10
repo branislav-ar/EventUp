@@ -2,10 +2,10 @@
 
 import { CreateUserParams, UpdateUserParams } from "@/types"
 import { handleError } from "../utils";
-import { connectToDatabase } from "../mongodb/database";
-import User from "../mongodb/database/models/user.model";
-import Order from "../mongodb/database/models/user.model";
-import Event from "../mongodb/database/models/user.model";
+import { connectToDatabase } from "../database";
+import User from "../database/models/user.model";
+import Order from "../database/models/user.model";
+import Event from "../database/models/user.model";
 import { revalidatePath } from "next/cache";
 
 export async function getUserById(userId: string) {
@@ -21,7 +21,7 @@ export async function getUserById(userId: string) {
     }
 }
 
-export const createUser = async (user: CreateUserParams) => {
+export async function createUser(user: CreateUserParams) {
     try {
         await connectToDatabase();
 
