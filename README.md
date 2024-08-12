@@ -1,4 +1,6 @@
-# 🥂 EventUp! - full stack aplikacija za organizaciju događaja!
+# 🥂 EventUp! - full stack aplikacija
+
+![](https://i.imgur.com/EgnqcD5.png)
 
 ## ⚙️ Tech Stack
 
