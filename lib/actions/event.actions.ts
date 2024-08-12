@@ -97,27 +97,31 @@ export const getEventById = async (eventId: string) => {
 }
 
 export const getAllEvents = async ({query, limit = 6, page, category}: GetAllEventsParams) => {
-    try {
-        await connectToDatabase();
-        
-        const conditions = {};
+  try {
+    await connectToDatabase()
 
-        const eventsQuery = Event.find(conditions)
-        .sort({ createdAt: 'desc' })
-        .skip(0)
-        .limit(limit);
-
-        const events = await populateEvent(eventsQuery);
-        const eventsCount = await Event.countDocuments(conditions)
-
-        return {
-            data: JSON.parse(JSON.stringify(events)),
-            totalPages: Math.ceil(eventsCount / limit)
-        };
+    const titleCondition = query ? { title: { $regex: query, $options: 'i' } } : {}
+    const categoryCondition = category ? await getCategoryByName(category) : null
+    const conditions = {
+      $and: [titleCondition, categoryCondition ? { category: categoryCondition._id } : {}],
     }
-    catch(error) {
-        handleError(error);
+
+    const skipAmount = (Number(page) - 1) * limit
+    const eventsQuery = Event.find(conditions)
+      .sort({ createdAt: 'desc' })
+      .skip(skipAmount)
+      .limit(limit)
+
+    const events = await populateEvent(eventsQuery)
+    const eventsCount = await Event.countDocuments(conditions)
+
+    return {
+      data: JSON.parse(JSON.stringify(events)),
+      totalPages: Math.ceil(eventsCount / limit),
     }
+  } catch (error) {
+    handleError(error)
+  }
 }
 
 export async function getEventsByUser({ userId, limit = 6, page }: GetEventsByUserParams) {

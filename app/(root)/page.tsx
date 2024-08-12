@@ -4,13 +4,20 @@ import { Button } from "@/components/ui/button";
 import Collection from "@/components/shared/Collection";
 import { getAllEvents } from "@/lib/actions/event.actions";
 import Category from "@/lib/database/models/category.model";
+import Search from "@/components/shared/Search";
+import { SearchParamProps } from "@/types";
+import CategoryFilter from "@/components/shared/CategoryFilter";
 
-export default async function Home() {
-
+export default async function Home({ searchParams }: SearchParamProps) {
+  
+  const page = Number(searchParams?.page) || 1;
+  const searchText = (searchParams?.query as string) || '';
+  const category = (searchParams?.category as string) || '';
+  
   const events = await getAllEvents({
-    query: '',
-    category: '',
-    page: 1,
+    query: searchText,
+    category,
+    page,
     limit: 6
   });
 
@@ -51,8 +58,8 @@ export default async function Home() {
             </h2>
           </section>
           <div className="flex w-full flex-col gap-5 md:flex-row">
-            Search 
-            CategoriesFilter
+            <Search placeholder="Pretražite po imenu događaja..." />
+            <CategoryFilter />
           </div>
 
           <Collection 
@@ -61,8 +68,8 @@ export default async function Home() {
             emptyStateSubtext="Probajte ponovo kasnije!"
             collectionType="All_Events"
             limit={6}
-            page={1}
-            totalPages={2}
+            page={page}
+            totalPages={events?.totalPages}
           />
           
         </section>

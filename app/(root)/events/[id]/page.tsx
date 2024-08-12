@@ -113,9 +113,9 @@ const EventDetails = async ({ params: { id }, searchParams}: SearchParamProps) =
             emptyTitle="Nema sličnih događaja..."
             emptyStateSubtext="Probajte ponovo kasnije!"
             collectionType="All_Events"
-            limit={6}
-            page={1}
-            totalPages={2}
+            limit={3}
+            page={searchParams.page as string}
+            totalPages={relatedEvents?.totalPages}
           />
       </section>
     </>
