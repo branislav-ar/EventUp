@@ -7,8 +7,8 @@ import { formUrlQuery } from '@/lib/utils';
 
 type PaginationProps = {
     page: number | string,
-    totalpages: number,
-    urlPageName?: string
+    totalPages: number,
+    urlParamName?: string
 }
 const Pagination = ({ page, totalPages, urlParamName}: PaginationProps) => {
     const router = useRouter();
