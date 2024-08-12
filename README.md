@@ -1,36 +1,50 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# 🥂 EventUp! - full stack aplikacija za organizaciju događaja!
 
-## Getting Started
+## ⚙️ Tech Stack
 
-First, run the development server:
+- **Node.js**
+- **Next.js**
+- **TypeScript**
+- **TailwindCSS**
+- **Stripe**
+- **Zod**
+- **React Hook Form**
+- **Shadcn**
+- **uploadthing**
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## 🔋 Funkcionalnosti
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 👉 Autentifikacija (CRUD) korišćenjem Clerk-a
+Upravljanje korisnicima putem **Clerk-a**, osiguravajući sigurnu i efikasnu autentifikaciju.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### 👉 Događaji (CRUD)
+Sveobuhvatna funkcionalnost za kreiranje, čitanje, ažuriranje i brisanje događaja, dajući korisnicima potpunu kontrolu nad upravljanjem događajima.
+- **Kreiranje Događaja:** Lako generisanje novih događaja, pružajući osnovne detalje kao što su naslov, datum, lokacija i dodatne informacije.
+- **Čitanje Događaja:** Bez problema pristupite detaljnom prikazu svih događaja, omogućavajući korisnicima da istraže specifičnosti događaja, uključujući opise, rasporede i povezane informacije.
+- **Ažuriranje Događaja:** Dinamično menjanje detalja događaja, osiguravajući da informacije ostanu tačne i ažurne.
+- **Brisanje Događaja:** Jednostavan proces uklanjanja događaja iz sistema, omogućavajući administratorima da efikasno upravljaju i organizuju platformu.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### 👉 Povezani događaji
+Pametno povezuje slične događaje i prikazuje ih na stranici sa detaljima događaja, čineći platformu zanimljivijom za korisnike.
 
-## Learn More
+### 👉 Organizovani događaji
+Efikasna organizacija događaja koja osigurava strukturiran prikaz: npr. prikazivanje događaja koje je korisnik kreirao na svom profilu.
 
-To learn more about Next.js, take a look at the following resources:
+### 👉 Pretraga i filtriranje
+Omogućava korisnicima sistem pretrage i filtriranja, olakšavajući pronalaženje događaja koji odgovaraju njihovim preferencama.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### 👉 Nova kategorija
+Dinamično kategorizovanje omogućava besprekorno dodavanje novih kategorija događaja, održavajući platformu prilagodljivom.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+### 👉 Plaćanje implementirano uz Stripe
+Sigurno plaćanje koristeći **Stripe** uz dobro korisničko iskustvo tokom samog procesa plaćanja.
 
-## Deploy on Vercel
+### 👉 Pregled kupljenih karata za događaje
+Sistem upravljanja narudžbinama koji pruža jasan pregled svih transakcija povezanih sa događajima.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 👉 Pretraga narudžbina
+Brza i efikasna funkcija pretrage narudžbina, olakšavajući praćenje i upravljanje.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+***
+
+### 🌐 Pristupite aktivnoj verziji aplikacije: 🥂 [EventUp!](https://event-up-blue.vercel.app/) 🥂
