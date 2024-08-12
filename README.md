@@ -1,6 +1,6 @@
 # 🥂 EventUp! - full stack aplikacija
 
-![](https://i.imgur.com/EgnqcD5.png)
+![](https://i.imgur.com/Zccfj5Z.jpeg)
 
 ## ⚙️ Tech Stack
 
