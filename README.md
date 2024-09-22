@@ -1,4 +1,4 @@
-# 🥂 EventUp! - full stack aplikacija
+# 🥂 EventUp! - full stack application
 
 ![](https://i.imgur.com/Zccfj5Z.jpeg)
 
@@ -14,39 +14,39 @@
 - **Shadcn**
 - **uploadthing**
 
-## 🔋 Funkcionalnosti
+## 🔋 Features
 
-### 👉 Autentifikacija (CRUD) korišćenjem Clerk-a
-Upravljanje korisnicima putem **Clerk-a**, osiguravajući sigurnu i efikasnu autentifikaciju.
+### 👉 Authentication (CRUD) using Clerk
+User management through Clerk, ensuring secure and efficient authentication.
 
-### 👉 Događaji (CRUD)
-Sveobuhvatna funkcionalnost za kreiranje, čitanje, ažuriranje i brisanje događaja, dajući korisnicima potpunu kontrolu nad upravljanjem događajima.
-- **Kreiranje Događaja:** Lako generisanje novih događaja, pružajući osnovne detalje kao što su naslov, datum, lokacija i dodatne informacije.
-- **Čitanje Događaja:** Bez problema pristupite detaljnom prikazu svih događaja, omogućavajući korisnicima da istraže specifičnosti događaja, uključujući opise, rasporede i povezane informacije.
-- **Ažuriranje Događaja:** Dinamično menjanje detalja događaja, osiguravajući da informacije ostanu tačne i ažurne.
-- **Brisanje Događaja:** Jednostavan proces uklanjanja događaja iz sistema, omogućavajući administratorima da efikasno upravljaju i organizuju platformu.
+### 👉 Events (CRUD)
+Comprehensive functionality for creating, reading, updating, and deleting events, giving users full control over event management.
+- **Creating Events:** Easily generate new events by providing key details such as title, date, location, and additional information.
+- **Event Page(s):** Seamlessly access detailed views of all events, allowing users to explore event specifics, including descriptions, schedules, and related information.
+- **Updating Events:** Dynamically modify event details, ensuring that the information remains accurate and up-to-date.
+- **Deleting Events:** A simple process for removing events from the system, enabling administrators to efficiently manage and organize the platform.
 
-### 👉 Povezani događaji
-Pametno povezuje slične događaje i prikazuje ih na stranici sa detaljima događaja, čineći platformu zanimljivijom za korisnike.
+### 👉 Related Events
+Intelligently connects similar events and displays them on the event details page, making the platform more engaging for users.
 
-### 👉 Organizovani događaji
-Efikasna organizacija događaja koja osigurava strukturiran prikaz: npr. prikazivanje događaja koje je korisnik kreirao na svom profilu.
+### 👉 Organized Events
+Efficient event organization that ensures a structured display: for example, showcasing events created by the user on their profile.
 
-### 👉 Pretraga i filtriranje
-Omogućava korisnicima sistem pretrage i filtriranja, olakšavajući pronalaženje događaja koji odgovaraju njihovim preferencama.
+### 👉 Search and Filtering
+Enables users to search and filter events, making it easier to find events that match their preferences.
 
-### 👉 Nova kategorija
-Dinamično kategorizovanje omogućava besprekorno dodavanje novih kategorija događaja, održavajući platformu prilagodljivom.
+### 👉 A New Category
+Dynamic categorization allows for seamless addition of new event categories, keeping the platform flexible.
 
-### 👉 Plaćanje implementirano uz Stripe
-Sigurno plaćanje koristeći **Stripe** uz dobro korisničko iskustvo tokom samog procesa plaćanja.
+### 👉 Payment implemented with Stripe
+Secure payment using **Stripe** with a smooth user experience throughout the payment process.
 
-### 👉 Pregled kupljenih karata za događaje
-Sistem upravljanja narudžbinama koji pruža jasan pregled svih transakcija povezanih sa događajima.
+### 👉 Overview of Purchased Tickets for Events
+Order management system that provides a clear overview of all transactions related to events.
 
-### 👉 Pretraga narudžbina
-Brza i efikasna funkcija pretrage narudžbina, olakšavajući praćenje i upravljanje.
+### 👉 Order search
+Fast and efficient order search function, making it easier to track and manage orders.
 
 ***
 
-### 🌐 Pristupite aktivnoj verziji aplikacije: 🥂 [EventUp!](https://event-up-blue.vercel.app/) 🥂
+### 🌐 Access the active version of the application at: 🥂 [EventUp!](https://event-up-blue.vercel.app/) 🥂
