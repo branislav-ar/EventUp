@@ -1,11 +1,20 @@
-# 🥂 EventUp! - full stack application
+## 🥂 EventUp! - full stack application
 
-![](https://i.imgur.com/Zccfj5Z.jpeg)
+
+![Next.js](https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white) ![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedo) ![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)\
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+
+
+![EventUp!](https://i.imgur.com/Zccfj5Z.jpeg)
+
+---
 
 ## ⚙️ Tech Stack
 
+
 - **Node.js**
 - **Next.js**
+- **MongoDB**
 - **TypeScript**
 - **TailwindCSS**
 - **Stripe**
@@ -14,39 +23,50 @@
 - **Shadcn**
 - **uploadthing**
 
+---
+
 ## 🔋 Features
 
-### 👉 Authentication (CRUD) using Clerk
-User management through Clerk, ensuring secure and efficient authentication.
 
-### 👉 Events (CRUD)
-Comprehensive functionality for creating, reading, updating, and deleting events, giving users full control over event management.
-- **Creating Events:** Easily generate new events by providing key details such as title, date, location, and additional information.
-- **Event Page(s):** Seamlessly access detailed views of all events, allowing users to explore event specifics, including descriptions, schedules, and related information.
-- **Updating Events:** Dynamically modify event details, ensuring that the information remains accurate and up-to-date.
-- **Deleting Events:** A simple process for removing events from the system, enabling administrators to efficiently manage and organize the platform.
+#### 🔐 Authentication & User Management
+- **Clerk Integration** for robust authentication (CRUD)
+- Secure login, signup, and profile management
 
-### 👉 Related Events
-Intelligently connects similar events and displays them on the event details page, making the platform more engaging for users.
+#### 🎟️ Event Management (CRUD)
+- **Create:** Add new events with title, date, location, and details
+  - Built with **Next.js** and **React Hook Form** for dynamic form creation and validation
+  - **Zod** ensures schema validation
+- **Read:** Browse and view detailed event pages
+  - Leveraging **Next.js**’s dynamic routing for event detail pages
+- **Update:** Modify event information seamlessly
+  - Uses **Shadcn** components for consistent UI/UX and **Uploadthing** for file uploads
+- **Delete:** Remove events when no longer needed
+  - Efficient server-side handling with **Next.js** API routes
 
-### 👉 Organized Events
-Efficient event organization that ensures a structured display: for example, showcasing events created by the user on their profile.
+### 🔗 Related Events
+- Discover similar events on each event’s detail page for better engagement
 
-### 👉 Search and Filtering
-Enables users to search and filter events, making it easier to find events that match their preferences.
+#### 📚 Organized Events
+- View all events created by a user on their profile page
+- Neat and user-friendly display with **Tailwind CSS** for a responsive layout
 
-### 👉 A New Category
-Dynamic categorization allows for seamless addition of new event categories, keeping the platform flexible.
+#### 🔎 Search & Filtering
+- Search and filtering option to find events that match user preferences
 
-### 👉 Payment implemented with Stripe
-Secure payment using **Stripe** with a smooth user experience throughout the payment process.
+#### 🏷️ Dynamic Categories
+- Add and manage new categories for events effortlessly
 
-### 👉 Overview of Purchased Tickets for Events
-Order management system that provides a clear overview of all transactions related to events.
+#### 💳 Stripe-Powered Payments
+- Secure payments via **Stripe**
+- Smooth and intuitive checkout process
 
-### 👉 Order search
-Fast and efficient order search function, making it easier to track and manage orders.
+#### 📦 Order Management
+- Overview of all ticket purchases for users and event organizers
+- Quick order search functionality for efficient tracking
 
-***
+---
 
-### 🌐 Access the active version of the application at: 🥂 [EventUp!](https://event-up-blue.vercel.app/) 🥂
+## 🚀 Live Demo
+
+
+🌐 **Check out the active app:** [EventUp!](https://event-up-blue.vercel.app/) 🌟
